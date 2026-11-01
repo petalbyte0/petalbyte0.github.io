@@ -1,11 +1,17 @@
+:root {
+  --panel-background: #fffaf5;
+  --link-color: #6b4b3e;
+}
+
 body {
-  background: url('assets/background.jpg') center center/cover no-repeat;
-  font-family: 'Quicksand', Arial, sans-serif;
+  background: linear-gradient(135deg, #f3e8df 0%, #b3917c 50%, #49332c 100%);
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .container {
@@ -18,49 +24,61 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .profile {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
+  gap: 1rem;
 }
 
 .avatar {
-  width: 96px;
-  height: 96px;
+  width: 128px;
+  height: 128px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #cfa77f;
-  margin-bottom: 1rem;
+  border: 1px solid #000;
   box-shadow: 0 2px 8px rgba(94, 63, 45, 0.18);
 }
 
 h1 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin: 0 0 0.25rem 0;
+  margin: 0;
+  text-align: center;
   color: #5a3c2f;
 }
 
 .bio {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   font-size: 1rem;
   text-align: center;
   color: #4d3429;
   margin: 0;
   font-weight: 600;
   line-height: 1.5;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
-  background: rgba(255, 248, 240, 0.78);
-  padding: 0.5rem 2rem;
+  background: var(--panel-background);
+  padding: 1rem 1.25rem;
   border-radius: 0.6rem;
-  backdrop-filter: blur(3px);
   box-shadow: 0 2px 6px rgba(94, 63, 45, 0.12);
 }
 
 .bio p {
-  margin: 0.25rem 0;
+  margin: 0;
+}
+
+.bio a {
+  color: var(--link-color);
+  text-underline-offset: 0.15em;
 }
 
 .links {
@@ -71,15 +89,17 @@ h1 {
 }
 
 .link {
+  box-sizing: border-box;
   display: block;
   width: 100%;
   text-align: center;
-  background: #fffaf5;
-  color: #6b4b3e;
+  background: var(--panel-background);
+  color: var(--link-color);
   text-decoration: none;
   font-size: 1.125rem;
   font-weight: 700;
-  padding: 1rem 0;
+  line-height: 1.4;
+  padding: 1rem 1.25rem;
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(94, 63, 45, 0.14);
   transition: transform 0.08s, box-shadow 0.08s, background 0.2s, color 0.2s, border 0.2s;
@@ -97,8 +117,8 @@ h1 {
     max-width: 98vw;
   }
   .avatar {
-    width: 72px;
-    height: 72px;
+    width: 104px;
+    height: 104px;
   }
   h1 {
     font-size: 1.1rem;
